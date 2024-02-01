@@ -1,10 +1,8 @@
-/*
- * Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license.
- * See LICENSE in the project root for license information.
- */
-
+// /*
+//  * Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license.
+//  * See LICENSE in the project root for license information.
+//  */
 /* global console, document, Excel, Office */
-
 Office.onReady((info) => {
   if (info.host === Office.HostType.Excel) {
     // Determine if the user's version of Office supports all the Office.js APIs that are used in the tutorial.
@@ -36,10 +34,10 @@ export async function {
 
       await context.sync();
       console.log(`The range address was ${range.address}.`);
-    });
-  } catch (error) {
+      });
+    } catch (error) {
     console.error(error);
-  }
+       }
 }
 async function createTable() {
   await Excel.run(async (context) => {
